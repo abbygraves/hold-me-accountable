@@ -25,7 +25,7 @@ SO THAT my friends can comment and hold me accountable on my progress
 <br/>
 
   ## **Installation** 
-  Please make sure to have Node.js installed on your local system to
+  First, please ensure Node.js is installed on your local system
 
   ```md
   npm i express
