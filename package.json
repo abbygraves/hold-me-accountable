@@ -1,0 +1,20 @@
+{
+  "name": "hold-me-accountable",
+  "version": "1.0.0",
+  "description": "![License: MIT](https://img.shields.io/badge/License-MIT-06D54C.svg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abbygraves/hold-me-accountable.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abbygraves/hold-me-accountable/issues"
+  },
+  "homepage": "https://github.com/abbygraves/hold-me-accountable#readme"
+}
