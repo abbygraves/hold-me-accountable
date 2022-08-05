@@ -4,7 +4,8 @@
   "description": "![License: MIT](https://img.shields.io/badge/License-MIT-06D54C.svg)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "index.js"
   },
   "repository": {
     "type": "git",
