@@ -4,7 +4,7 @@
   "description": "![License: MIT](https://img.shields.io/badge/License-MIT-06D54C.svg)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node index.js"
   },
   "repository": {
@@ -19,6 +19,11 @@
   },
   "homepage": "https://github.com/abbygraves/hold-me-accountable#readme",
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.21.3"
+  },
+  "devDependencies": {
+    "jest": "^28.1.3"
   }
 }
