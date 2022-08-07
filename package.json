@@ -2,10 +2,10 @@
   "name": "hold-me-accountable",
   "version": "1.0.0",
   "description": "![License: MIT](https://img.shields.io/badge/License-MIT-06D54C.svg)",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "jest",
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
