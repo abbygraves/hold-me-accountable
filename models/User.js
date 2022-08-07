@@ -1,11 +1,11 @@
 const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection");
+const sequelize = require("../config/connection").default;
 const bcrypt = require("bcrypt");
 
 class User extends Model {
-    checkPassword(loginPassword) {
-        return bcrypt.compare(loginPassword, this.password);
-    }
+  checkPassword(loginPassword) {
+    return bcrypt.compare(loginPassword, this.password);
+  }
 }
 
 //creates the User model to store profile and login data
@@ -51,13 +51,13 @@ User.init(
           10
         );
         return updateUserData;
-      }
+      },
     },
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: "user",
   }
 );
 
