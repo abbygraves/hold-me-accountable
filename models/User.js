@@ -11,24 +11,28 @@ class User extends Model {
 //creates the User model to store profile and login data
 User.init(
   {
-    id: {
+    id: 
+    {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    username: {
+    username: 
+    {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    password: {
+    password: 
+    {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [6],
       },
     },
-    email: {
+    email: 
+    {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
@@ -39,7 +43,8 @@ User.init(
     //Potentially add a user profile image here for extra fluff if there's time
   },
   {
-    hooks: {
+    hooks: 
+    {
       async beforeCreate(newUserData) {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
