@@ -36,6 +36,13 @@ User.init(
         isEmail: true,
       },
     },
+    profile_img: {
+      type: DataTypes.STRING,
+      validate: {
+        isUrl: true
+      },
+
+    }
     //Potentially add a user profile image here for extra fluff if there's time
   },
   {
