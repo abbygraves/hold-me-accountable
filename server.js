@@ -10,7 +10,7 @@ const sequelize = require("./config/connection");
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
-  secret: '',
+  secret: 'super secret secret',
   cookie: {},
   resave: false,
   saveUninitialized: true,
@@ -31,7 +31,6 @@ app.set("view engine", "handlebars");
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
-app.use(express.static(path.join(__dirname, "/public/images")));
 
 app.use(require('./controllers/'));
 
