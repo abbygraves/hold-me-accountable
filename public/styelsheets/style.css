@@ -85,7 +85,6 @@ header h1 {
 
 .search-icon {
   color: white;
-  
 }
 
 .profile-title img {
@@ -98,7 +97,8 @@ header h1 {
 
 .profile-title h1 {
   color: black;
-  margin-top: 80px
+  margin-top: 80px;
+  font-size: 30px;
 }
 
 .profile-title p {
@@ -108,6 +108,7 @@ header h1 {
   color: white;
   font-family: 'Roboto Mono', monospace;
   font-weight: medium;
+  font-size: 20px;
 }
 
 .logs {
@@ -115,6 +116,10 @@ header h1 {
   justify-content: space-evenly;
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+.logs h1 {
+  font-size: 30px;
 }
 
 .update-log {
@@ -139,10 +144,12 @@ header h1 {
   background-color: #20A7FF;
   width: 100%;
   text-align: center;
+  border-radius: 5px;
 }
 
-.contents {
-  padding: 50px;
+.contents p {
+  margin: 20px 10px;
+  
 }
 
 /* FOOTER STYLE START */
