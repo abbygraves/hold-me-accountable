@@ -4,7 +4,7 @@ const Comment = require("./Comment");
 const Updates = require("./Updates");
 
 //User to Post associations
-User.hasOne(Post, { foreignKey: "user_id" });
+User.hasOne(Post, { foreignKey: "user_id", onDelete: "set null" });
 Post.belongsTo(User, { foreignKey: "user_id", onDelete: "set null" });
 
 //User to Comment associations

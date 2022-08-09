@@ -43,7 +43,6 @@ User.init(
       },
 
     }
-    //Potentially add a user profile image here for extra fluff if there's time
   },
   {
     hooks: {

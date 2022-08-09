@@ -11,7 +11,7 @@ Updates.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    update_text: {
+    updates_text: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {

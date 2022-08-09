@@ -8,11 +8,12 @@ function createRandomUser() {
   return {
     username: faker.internet.userName(),
     password: faker.internet.password(),
-    email: faker.internet.email()
+    email: faker.internet.email(),
+    profile_img: faker.image.imageUrl()
   }
 };
 
-Array.from({ length: 10 }).forEach(() => {
+Array.from({ length: 15 }).forEach(() => {
   userData.push(createRandomUser());
 });
 
