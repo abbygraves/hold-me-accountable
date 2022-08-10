@@ -1,0 +1,63 @@
+<!-- HEADER START -->
+<header>
+  <h1>
+    <a href="profile.html">Hold Me Accountable</a>
+  </h1>
+  <div>
+    <input class="search-input mb-2 px-2" type="text" placeholder="Search" id="search-bar" />
+    <i class="search-icon fa-solid fa-magnifying-glass"></i>
+  </div>
+</header>
+
+<main>
+  <div class="profile-title columns-5">
+    <img src="{{user.profile_img}}" />
+    <h1>{{user.username}}</h1>
+    <p>My Bad Habit: <span>{{post.title}}</span></p>
+  </div>
+
+  <div class="logs">
+    <div class="update-log">
+      <h1 class="card-header">Update Log</h1>
+      <div class="contents">
+        <ol class="post-list">
+          {{#each posts as |post|}}
+          <li>
+            <article class="post">
+              <div class="title">
+                <p>{{post.update_text}}</p>
+              </div>
+              <div class="meta">
+                by {{post.user.username}} on {{post.created_at}}
+                <a href="/post/{{post.id}}">
+              </div>
+            </article>
+          </li>
+          {{/each}}
+        </ol>
+      </div>
+    </div>
+
+    <div class="comment-log">
+      <h1 class="card-header">Comment Log</h1>
+      <div class="contents">
+        <ol class="post-list">
+          {{#each posts as |post|}}
+          <li>
+            <article class="post">
+              <div class="title">
+                <p>{{post.comment_text}}</p>
+              </div>
+              <div class="meta">
+                by {{post.user.username}} on {{post.created_at}}
+                <a href="/post/{{post.id}}">
+              </div>
+            </article>
+          </li>
+          {{/each}}
+        </ol>
+      </div>
+    </div>
+  </div>
+
+</main>

@@ -5,28 +5,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hold Me Accountable</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/styelsheets/style.css">
+  {{!--
+  <link rel="stylesheet" href="/stylesheets/homepage.css"> --}}
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6e1e3196b2.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <div class="wrapper">
-    <header>
+    {{!-- <header>
       <h1>
         <a href="/">Hold Me Accountable</a>
       </h1>
       <nav>
         <a href="/login">login</a>
       </nav>
-    </header>
+    </header> --}}
     <main>
       {{{ body }}}
     </main>
-    <footer>
-      We believe in you!
+    <footer class="object-bottom">
+      <div>
+        <p>&copy Copyright 2022 by The Leftovers</p>
+      </div>
     </footer>
   </div>
 
