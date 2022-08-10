@@ -1,9 +1,23 @@
 const router = require('express').Router();
+const { request } = require('express');
 const { Updates } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => {
   Updates.findAll()
+    .then(dbUpdatesData => res.json(dbUpdatesData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+router.get('/:id', (req, res) => {
+  Updates.findAll({
+    where: {
+      id: req.params.id,
+    }
+  })
     .then(dbUpdatesData => res.json(dbUpdatesData))
     .catch(err => {
       console.log(err);
