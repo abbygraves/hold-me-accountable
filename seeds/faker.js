@@ -13,7 +13,7 @@ const { READUNCOMMITTED } = require('sequelize/types/table-hints');
 
  // comment "data"
 
- const comment_text = faker.lorem.paragraph(sentenceCount: number = 3);
+ const comment_text = faker.lorem.paragraph();
 
  const user_id = faker.datatype.number(1000);
 
@@ -23,8 +23,36 @@ const { READUNCOMMITTED } = require('sequelize/types/table-hints');
 
  const title = faker.random.words(4);
 
-//not sure if I need this const post_url = 
 
-// update "data"
+// updates "data"
 
-const update_text = faker.lorem.paragraph(sentenceCount: number = 3);
+const updates_text = faker.lorem.paragraph();
+
+// JSON
+
+// JSON for post "data"
+
+const jsonUser = JSON.stringify({
+  username,
+  password,
+  email,
+  profile_img,
+});
+
+const jsonComment = JSON.stringify({
+    comment_text,
+    user_id,
+    post_id,
+});
+
+const jsonPost = JSON.stringify({
+    title,
+    user_id,
+});
+
+const jsonUpdate = JSON.stringify({
+    title,
+    updates_text,
+    user_id,
+    post_id,
+});
