@@ -11,8 +11,8 @@
 
 <main>
   <div class="profile-title columns-5">
-    <img src="/images/Cat03.jpeg" />
-    <h1 class="username">Name</h1>
+    <img src="{{user.profile_img}}" />
+    <h1>{{user.username}}</h1>
     <p>My Bad Habit: <span>{{post.title}}</span></p>
   </div>
 
@@ -25,7 +25,7 @@
           <li>
             <article class="post">
               <div class="title">
-                <a href="{{post.post_url}}">{{post.update_text}}</a>
+                <p>{{post.update_text}}</p>
               </div>
               <div class="meta">
                 by {{post.user.username}} on {{post.created_at}}
@@ -46,7 +46,7 @@
           <li>
             <article class="post">
               <div class="title">
-                <a href="{{post.post_url}}">{{post.comment_text}}</a>
+                <p>{{post.comment_text}}</p>
               </div>
               <div class="meta">
                 by {{post.user.username}} on {{post.created_at}}
