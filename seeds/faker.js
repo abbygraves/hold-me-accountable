@@ -13,7 +13,7 @@ const { READUNCOMMITTED } = require('sequelize/types/table-hints');
 
  // comment "data"
 
- const comment_text = faker.lorem.paragraph();
+ const comment_text = faker.lorem.paragraph(sentenceCount: number = 3);
 
  const user_id = faker.datatype.number(1000);
 
@@ -21,7 +21,10 @@ const { READUNCOMMITTED } = require('sequelize/types/table-hints');
 
  // post "data"
 
- const title = faker.random.words(7);
+ const title = faker.random.words(4);
 
 //not sure if I need this const post_url = 
 
+// update "data"
+
+const update_text = faker.lorem.paragraph(sentenceCount: number = 3);
