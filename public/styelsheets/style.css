@@ -45,18 +45,6 @@ h1 {
   color: #20A7FF;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-:root {
-  --first: #46B8B2;  /* –––––––––––––– main color (slightly transparent) */
-  --second: #18b5cae9; /* –––––––––––––– more opaque version of main color */
-  --third: rgb(220, 220, 220); /* –––––– light grey for shadows */
-  --fourth: #8F8F8F;
-  --fifth: #00a2ff89;
-}
-
 
 header {
   background-color: #20A7FF;
@@ -149,8 +137,42 @@ header h1 {
 
 .contents p {
   margin: 20px 10px;
-  
 }
+
+.text-fields,
+.text-field-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+.text-input {
+  width: 30%;
+  border: 2px solid grey;
+  border-radius: 3px;
+  filter: drop-shadow(-1px 3px 1px var(--fourth));
+}
+
+.text-fields button {
+  background-color: #20A7FF;
+  color: white;
+  padding: 0px;
+  border-radius: 3px;
+  width: 10%;
+  text-align: center;
+  filter: drop-shadow(-1px 3px 1px var(--fourth));
+}
+
+
+.text-fields button:hover,
+.text-fields button:focus {
+  box-shadow: inset 12em 0 0 0 white;
+  transition: 0.5s;
+  color: #20A7FF;
+}
+
+
 
 /* FOOTER STYLE START */
 footer {
