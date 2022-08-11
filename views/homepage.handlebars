@@ -4,12 +4,17 @@
     <a href="/">Hold Me Accountable.</a>
   </h1>
   <div>
-    <input class="search-input mr-1 mb-2 px-2" type="text" placeholder="Search" id="search-bar" />
-    <i class="search-icon mr-5 fa-solid fa-magnifying-glass"></i>
+    <form class="search-form inline">
+      <input class="search-input mr-1 mb-2 px-2" type="text" placeholder="Search" name="search-field" id="search-bar" />
+      <button class="mr-5" type="submit"><i class="search-icon fa-solid fa-magnifying-glass"></i></button>
+    </form>
     <span class="text-white">│</span>
     <button id="logout" class="logout-button ml-5">Logout</button>
   </div>
 </header>
+
+
+{{!-- onclick="searchBarHandler( {{user.username}} )" --}}
 
 <main>
   <div class="profile-title grid grid-cols-4">
@@ -87,3 +92,4 @@
 
 <script src="/javascript/logout.js"></script>
 <script src="/javascript/text-fields.js"></script>
+<script src="/javascript/search.js"></script>
