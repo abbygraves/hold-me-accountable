@@ -11,9 +11,9 @@
 
 <main>
   <div class="profile-title columns-5">
-    <img src="{{user.profile_img}}" />
-    <h1>{{user.username}}</h1>
-    <p>My Bad Habit: <span>{{post.title}}</span></p>
+    <img src="https://loremflickr.com/200/200" />
+    <h1>{{userData.username}}</h1>
+    <p>My Bad Habit: <span>{{postData.title}}</span></p>
   </div>
 
   <div class="logs">
@@ -21,15 +21,15 @@
       <h1 class="card-header">Update Log</h1>
       <div class="contents">
         <ol class="post-list">
-          {{#each posts as |post|}}
+          {{#each updates as |update|}}
           <li>
             <article class="post">
               <div class="title">
-                <p>{{post.update_text}}</p>
+                <p>{{update.updates_text}}</p>
               </div>
               <div class="meta">
-                by {{post.user.username}} on {{post.created_at}}
-                <a href="/post/{{post.id}}">
+               <p>Created at: {{update.createdAt}}</p>
+                {{!-- <a href="/updates/{{update.id}}"> --}}
               </div>
             </article>
           </li>

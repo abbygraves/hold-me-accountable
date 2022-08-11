@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Post, User, Comment, Updates} = require('../models');
+const { update } = require('../models/User');
 const withAuth = require('../utils/auth');
 
 // get all posts for homepage
@@ -46,42 +47,38 @@ router.get('/', withAuth, async (req, res) => {
   const dbUserData = await User.findByPk(req.session.user_id, {
     attributes: { exclude: ["password"]
     },
-    include: [{model: Updates}]
+    include: [{model: Updates}, {model: Post}, {model: Comment}],
+    
   });
-  const userData = dbUserData.get({plain: true});
+
+  // const dbPostData = await Post.findOne(req.body.user_id, {
+  //   include: [{model: User}]});
+
+  // console.log("db post", dbPostData);
+  // const postData = await dbPostData.get({plain: true});
+  // console.log("db plain post", postData);
+    console.log(req.session.user_id);
+console.log("===============================================================================================");
+  // const ddbUpdatesData = await Updates.findAll({ where: {user_id: req.session.user_id}});
+  // console.log("db update", ddbUpdatesData);
+  // const updatesData = await ddbUpdatesData.get({plain: true});
+  console.log("==========================================================================================");
+  // console.log("db user", dbUserData);
+  const userData = await dbUserData.get({plain: true});
+  const {updates} = userData
+  
   console.log(userData);
+  console.log("==============================================================");
+  console.log(updates);
   res.render('homepage', {
     userData,
-    logged_in: true,
-    
+    //postData,
+    updates,
+    logged_in: true, 
   })
 });
-//   Updates.findAll({
-//     attributes: [
-//       'id',
-//       'updates_text',
-//       'created_at',
-//     ],
-//     include: [
-//       {
-//         model: User,
-//         attributes: ['username']
-//       }
-//     ]
-//   })
-//     .then(dbUpdatesData => {
-//       const updates = dbUpdatesData.map(updates => updates.get({ plain: true }));
-//       console.log(updates);
-//       res.render('homepage', {
-//         updates,
-//         loggedIn: req.session.loggedIn
-//       });
-//     })
-//     .catch(err => {
-//       console.log(err);
-//       res.status(500).json(err);
-//     });
-// });
+  
+
 
 // get single post
 // router.get('/post/:id', (req, res) => {

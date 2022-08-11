@@ -1,5 +1,4 @@
 const {faker} = require('@faker-js/faker');
-const { options } = require('../controllers');
 const {Updates} = require('../models');
 
 
