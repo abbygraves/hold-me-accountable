@@ -14,7 +14,7 @@
   <div class="profile-title columns-5">
     <img src="https://loremflickr.com/200/200" />
     <h1>{{userData.username}}</h1>
-    <p>My Bad Habit: <span>{{postData.title}}</span></p>
+    <p>My Bad Habit: <span>{{post.title}}</span></p>
   </div>
 
   <div class="logs">
@@ -30,7 +30,6 @@
               </div>
               <div class="meta">
                <p>Created at: {{update.createdAt}}</p>
-                {{!-- <a href="/updates/{{update.id}}"> --}}
               </div>
             </article>
           </li>
@@ -43,15 +42,14 @@
       <h1 class="card-header">Comment Log</h1>
       <div class="contents">
         <ol class="post-list">
-          {{#each posts as |post|}}
+          {{#each comments as |comment|}}
           <li>
             <article class="post">
               <div class="title">
-                <p>{{post.comment_text}}</p>
+                <p>{{comment.comment_text}}</p>
               </div>
               <div class="meta">
-                by {{post.user.username}} on {{post.created_at}}
-                <a href="/post/{{post.id}}">
+                By {{../userData.username}} on {{comment.createdAt}}
               </div>
             </article>
           </li>
