@@ -56,6 +56,7 @@ SO THAT my friends can comment and hold me accountable on my progress
   [Dario Orbita](https://github.com/DarioOrbita)<br/>
   [Devon Gray](https://github.com/graydevon)<br/>
   [Abdul Nur](https://github.com/KDPG13)<br/>
+  [Andrew Evans](https://github.com/SpookyAura7)<br/>
 
 <br/>
 
