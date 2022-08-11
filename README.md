@@ -1,6 +1,6 @@
 # Hold Me Accountable
 
-![License: MIT](https://img.shields.io/badge/License-MIT-06D54C.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-20A7FF.svg)
 
 ## **User Story**
 ```md
@@ -9,53 +9,60 @@ I WANT a social media platform to post my bad habit
 SO THAT my friends can comment and hold me accountable on my progress
 ```
 
+## **Description**
+A social platform called Hold Me Accountable where users can create their own profile and include the bad habit they are presently working towards breaking. Users are able to post updates to their Update Log to keep friends up to date on their progress towards breaking their bad habit. User's and friends are also able to add comments to a Comment Log on their own profile as well as other user's profiles to provide encouragement and comment on their friends progress.
 
-### [Click to View Application]()
+### [Click to View Application](https://afternoon-depths-64455.herokuapp.com/)
+
+<br/>
 
 <img src=""/>
 
 <br/>
 
 ## **Built With:**
+  + HTML
+  + CSS
   + JavaScript
   + Node.js
-  + Express.js
-  + MySQL 2
 
 <br/>
 
-  ## **Installation** 
-  First, please ensure Node.js is installed on your local system
+## **Installation** 
+1. Please ensure Node.js is installed on your local system
+2. Run the following command in the command-line in the root folder 
 
-  ```md
-  npm i express
-  ```
-  ```md
-  npm i mysql2
-  ```
-  ```md
-  npm i @faker-js/faker
-  ```
-
+```md
+npm i
+```
 
 <br/>
 
 ## **Credit**
-  + `inquirer.js` npm package: https://www.npmjs.com/package/inquirer/v/8.2.4
   + `MySQL 2` npm package: https://www.npmjs.com/package/mysql2
+  + `sequelize` npm package: https://www.npmjs.com/package/sequelize
+  + `express` npm package: https://www.npmjs.com/package/express
   + `@faker-js/faker` npm package: https://www.npmjs.com/package/@faker-js/faker
+  + `bcrypt` npm package: https://www.npmjs.com/package/bcrypt
+  + `handlebars` npm package: https://www.npmjs.com/package/handlebars
+  + `express-handlebars` npm package: https://www.npmjs.com/package/express-handlebars
+  + `express-session` npm package: https://www.npmjs.com/package/express-session
+  + `connnect-session-sequelize` npm package: https://www.npmjs.com/package/connect-session-sequelize
+  + `dotenv` npm package: https://www.npmjs.com/package/dotenv
+  + `nodemon` npm package: https://www.npmjs.com/package/nodemon
 
 <br/>
 
 ## **Got Questions?**
-  Feel free to reach out with questions or comments regarding Hold Me Accountable! 
-  
-  Collaborators Github Profiles :octocat:
-  <br/>
-  [Abby Graves](https://github.com/abbygraves)<br/>
-  [Dario Orbita](https://github.com/DarioOrbita)<br/>
-  [Devon Gray](https://github.com/graydevon)<br/>
-  [Abdul Nur](https://github.com/KDPG13)<br/>
+Feel free to reach out with questions or comments regarding Hold Me Accountable! 
+
+**Collaborators Github Profiles** &nbsp; :octocat:
+<br/>
+[Abby Graves](https://github.com/abbygraves)<br/>
+[Dario Orbita](https://github.com/DarioOrbita)<br/>
+[Devon Gray](https://github.com/graydevon)<br/>
+[Abdul Nur](https://github.com/KDPG13)<br/>
+[Andrew Evans](https://github.com/SpookyAura7)
 
 <br/>
 
