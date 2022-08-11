@@ -3,12 +3,13 @@
 }
 
 :root {
-  --first: #20A7FF;  /* –––––––––––––– main blue color */
-  --second: #18b5cae9; /* –––––––––––––– more opaque version of main color */
-  --third: #8F8F8F; /* ––––––––––––––––– grey used for drop shadows */
+  --first: #20A7FF;  /* –––––––––––––– main blue color (Dodger Blue) */
+  --second: #53C09A; /* –––––––––––––– green (Puerto Rico) */
+  --third: #868E96; /* ––––––––––––––––– grey used for drop shadows */
   --fourth: white;
   --fifth: black; 
 }
+
 
 #page-container {
   position: relative;
@@ -64,7 +65,7 @@ h1 {
 .login-button,
 .signup-button {
   display: block;
-  background-color: #20A7FF;
+  background-color: var(--first);
   color: white;
   border: 2px solid white;
   border-radius: 3px;
@@ -81,7 +82,7 @@ h1 {
 .signup-button:focus {
   box-shadow: inset 12em 0 0 0 white;
   transition: 0.5s;
-  color: #20A7FF;
+  color: var(--first);
 }
 /* LOGIN PAGE STYLYING END */
 /* —————————————————————————————————————————————————————————————————————————— */
@@ -89,8 +90,8 @@ h1 {
 
 /* HEADER STYLING START */
 header {
-  background-color: #20A7FF;
-  padding: 20px 35px 0 35px;
+  background-color: var(--first);
+  padding: 10px 35px 10px 35px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -126,72 +127,89 @@ header h1 {
 
 
 /* USER DATA STYLING START */
+.profile-title {
+  /* border-bottom: 2px dashed var(--third); */
+  padding-bottom: 30px;
+  align-items: center;
+}
+
 .profile-title img {
-  border: 2px solid #20A7FF;
-  width: 200px;
-  height: 200px;
+  border: 5px solid var(--first);
+  width: 250px;
+  height: 250px;
   margin-left: 60px;
   border-radius: 50%;
 }
 
 .profile-title h1 {
   color: black;
-  margin-top: 80px;
-  font-size: 30px;
+  font-size: 32px;
+  margin-bottom: 15px;
 }
 
 .profile-title p {
-  background-color: #20A7FF;
+  background-color: var(--first);
   border-radius: 5px;
   padding: 20px;
   color: white;
   font-family: 'Roboto Mono', monospace;
-  font-weight: medium;
   font-size: 20px;
-  margin-top: 10px;
+  margin-bottom: 40px;
+  filter: drop-shadow(-2px 3px 2px var(--third));
+}
+
+.habit-form {
+  width: 100%;
 }
 /* USER DATA STYLING END */
 
+.hr-1 {
+  width: 90%;
+}
 
 /* LOG STYLING START */
 .logs {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 30px 0px;
 }
 
-.logs h1 {
-  font-size: 30px;
-}
-
-.update-log {
-  border: 2px solid #20A7FF;
-  display: flex;
-  width: 40%;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-}
-
+.update-log,
 .comment-log {
-  border: 2px solid #20A7FF;
+  background-color: var(--fourth);
+  border: 4px solid var(--first);
   display: flex;
-  width: 40%;
+  width: 45%;
   border-radius: 5px;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
+  filter: drop-shadow(0px 6px 5px var(--third));
 }
 
 .card-header {
-  background-color: #20A7FF;
+  font-size: 30px;
+  padding: 6px;
+  background-color: var(--first);
   width: 100%;
   text-align: center;
-  /* border-radius: 5px; */
 }
 
-.contents p {
-  margin: 20px 10px;
+/* entire update/comment post */
+.post-list {
+  max-height: 450px;
+}
+
+/* main update text/comment text */
+.passage {
+  padding: 12px 10px 0px 10px;
+}
+
+/* by... on... data*/
+.meta {
+  padding: 0px 10px 12px 10px;
+  font-size: 12px;
+  font-style: italic;
+  color: #005E80;
 }
 /* LOG STYLING END */
 
@@ -202,18 +220,23 @@ header h1 {
   justify-content: space-evenly;
   margin-top: 30px;
   margin-bottom: 100px;
-  
+}
+
+.updates-form,
+.comment-form {
+  width: 45%;
 }
 
 .text-input {
-  width: 460px;
+  width: 100%;
   border: 2px solid grey;
   border-radius: 3px;
   filter: drop-shadow(-1px 3px 1px var(--third));
 }
 
-.forms-wrapper button {
-  background-color: #20A7FF;
+.forms-wrapper button,
+.habit-form button {
+  background-color: var(--first);
   color: white;
   padding: 3px 8px;
   border-radius: 3px;
@@ -224,10 +247,11 @@ header h1 {
 
 
 .forms-wrapper button:hover,
-.forms-wrapper button:focus {
-  box-shadow: inset 12em 0 0 0 white;
-  transition: 0.5s;
-  color: #20A7FF;
+.forms-wrapper button:focus,
+.habit-form button:hover,
+.habit-form button:focus {
+  box-shadow: inset 12em 0 0 0 #60C680;
+  transition: 0.3s;
 }
 /* LOG TEXT FIELDS/BUTTONS STYLING END */
 
@@ -236,7 +260,7 @@ header h1 {
 /* ——————————————————————————————————————————————————————————————————————————— */
 /* FOOTER STYLE START */
 footer {
-  background-color: #20A7FF;
+  background-color: var(--first);
   text-align: center;
   justify-content: center;
   border-top: 2px solid grey;
