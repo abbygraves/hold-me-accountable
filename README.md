@@ -16,7 +16,7 @@ A social platform called Hold Me Accountable where users can create their own pr
 
 <br/>
 
-<img src=""/>
+<img src="./public/images/hold-me-acct-app-screenshot.png"/>
 
 <br/>
 
