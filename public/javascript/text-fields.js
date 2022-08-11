@@ -3,7 +3,6 @@ async function updatesFormHandler(event) {
 
   const updates = document.querySelector('input[name="update-field"]').value.trim();
   
-
   // console.log(updates)
   const response = await fetch(`/api/updates`, {
     method: 'POST',
@@ -20,6 +19,13 @@ async function updatesFormHandler(event) {
   } else {
     alert(response.statusText);
   }
+}
+
+function deleteUpdates(id) {
+  fetch(`/api/updates/` + id, {
+    method: 'DELETE',
+  });
+  window.location.reload();
 }
 
 

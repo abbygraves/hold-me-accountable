@@ -38,7 +38,7 @@
                 <p>{{update.updates_text}}</p>
               </div>
               <div class="meta">
-               <p>{{update.createdAt}}</p>
+               <p>{{update.createdAt}}<button class="float-right mr-4" onclick="deleteUpdates( {{update.id}} )"><i class="fa-solid fa-trash-can"></i></button></p>
               </div>
             </article>
           </li>
@@ -59,7 +59,7 @@
                 <p>{{comment.comment_text}}</p>
               </div>
               <div class="meta">
-                By {{../userData.username}} on {{comment.createdAt}} <button class="delete-comment float-right mr-4" onclick="deleteComment( {{comment.id}} )"><i class="fa-solid fa-trash-can"></i></button>
+                By {{../userData.username}} on {{comment.createdAt}} <button class="float-right mr-4" onclick="deleteComment( {{comment.id}} )"><i class="fa-solid fa-trash-can"></i></button>
               </div>
             </article>
           </li>
