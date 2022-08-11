@@ -3,16 +3,27 @@
 }
 
 :root {
-  --first: #46B8B2;  /* –––––––––––––– main color (slightly transparent) */
+  --first: #20A7FF;  /* –––––––––––––– main blue color */
   --second: #18b5cae9; /* –––––––––––––– more opaque version of main color */
-  --third: rgb(220, 220, 220); /* –––––– light grey for shadows */
-  --fourth: #8F8F8F;
-  --fifth: #00a2ff89;
+  --third: #8F8F8F; /* ––––––––––––––––– grey used for drop shadows */
+  --fourth: white;
+  --fifth: black; 
 }
 
-/* body {
-  background-color: var(--fifth);
-} */
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#general-content-wrapper {
+  padding-bottom: 2.5rem;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 
 h1 {
   font-family: 'Roboto Mono', monospace;
@@ -20,13 +31,38 @@ h1 {
   font-size: 100px;
 }
 
+/* ——————————————————————————————————————————————————————————————————————————— */
+/* LOGIN PAGE STYLYING START */
+
+/* .login-content {
+   border: 2px solid fuchsia;
+} */
+
+#login-page-h1 {
+  color: var(--first);
+  font-size: 100px;
+  float: left;
+  margin-top: 18vh;
+}
+
+.login-input-wrapper {
+  background-color: var(--first);
+  border-radius: 3px;
+  padding: 20px;
+  width: 500px;
+  float: right;
+  margin-top: 20vh;
+
+}
+
 .login-input {
   border: 2px solid grey;
   border-radius: 3px;
-  filter: drop-shadow(-1px 3px 1px var(--fourth));
+  filter: drop-shadow(-1px 3px 1px var(--third));
 }
 
-.login-button {
+.login-button,
+.signup-button {
   display: block;
   background-color: #20A7FF;
   color: white;
@@ -34,30 +70,24 @@ h1 {
   border-radius: 3px;
   width: 90px;
   text-align: center;
-  filter: drop-shadow(-1px 3px 1px var(--fourth));
+  filter: drop-shadow(-1px 3px 1px var(--third));
+  margin-top: 5px;
 }
 
 
 .login-button:hover,
-.login-button button:focus {
+.login-button:focus,
+.signup-button:hover,
+.signup-button:focus {
   box-shadow: inset 12em 0 0 0 white;
   transition: 0.5s;
   color: #20A7FF;
 }
+/* LOGIN PAGE STYLYING END */
+/* —————————————————————————————————————————————————————————————————————————— */
+/* PROFILE PAGE STYLING START */
 
-* {
-  box-sizing: border-box;
-}
-
-:root {
-  --first: #46B8B2;  /* –––––––––––––– main color (slightly transparent) */
-  --second: #18b5cae9; /* –––––––––––––– more opaque version of main color */
-  --third: rgb(220, 220, 220); /* –––––– light grey for shadows */
-  --fourth: #8F8F8F;
-  --fifth: #00a2ff89;
-}
-
-
+/* HEADER STYLING START */
 header {
   background-color: #20A7FF;
   padding: 20px 35px 0 35px;
@@ -78,8 +108,8 @@ header h1 {
 .search-input {
   border: 2px solid grey;
   border-radius: 3px;
-  filter: drop-shadow(-1px 3px 1px var(--fourth));
-  margin: 30px;
+  filter: drop-shadow(-1px 3px 1px var(--third));
+  margin-top: 30px;
   padding: 5px;
 }
 
@@ -87,6 +117,15 @@ header h1 {
   color: white;
 }
 
+.logout-button {
+  color: var(--fourth);
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+}
+/* HEADER STYLING END */
+
+
+/* USER DATA STYLING START */
 .profile-title img {
   border: 2px solid #20A7FF;
   width: 200px;
@@ -109,8 +148,12 @@ header h1 {
   font-family: 'Roboto Mono', monospace;
   font-weight: medium;
   font-size: 20px;
+  margin-top: 10px;
 }
+/* USER DATA STYLING END */
 
+
+/* LOG STYLING START */
 .logs {
   display: flex;
   justify-content: space-evenly;
@@ -144,24 +187,59 @@ header h1 {
   background-color: #20A7FF;
   width: 100%;
   text-align: center;
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 .contents p {
   margin: 20px 10px;
-  
+}
+/* LOG STYLING END */
+
+
+/* LOG TEXT FIELDS/BUTTONS STYLING START */
+.text-fields,
+.text-field-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 0px;
 }
 
+.text-input {
+  width: 100%;
+  border: 2px solid grey;
+  border-radius: 3px;
+  filter: drop-shadow(-1px 3px 1px var(--third));
+}
+
+.text-fields button {
+  background-color: #20A7FF;
+  color: white;
+  padding: 0px;
+  border-radius: 3px;
+  width: 100px;
+  text-align: center;
+  filter: drop-shadow(-1px 3px 1px var(--third));
+}
+
+
+.text-fields button:hover,
+.text-fields button:focus {
+  box-shadow: inset 12em 0 0 0 white;
+  transition: 0.5s;
+  color: #20A7FF;
+}
+/* LOG TEXT FIELDS/BUTTONS STYLING END */
+
+
+/* PROFILE PAGE STYLING END */
+/* ——————————————————————————————————————————————————————————————————————————— */
 /* FOOTER STYLE START */
 footer {
   background-color: #20A7FF;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  text-align: center;
   justify-content: center;
-  align-items: center;
   border-top: 2px solid grey;
-  /* margin-top: 416px; */
 }
 
 footer p {

@@ -7,7 +7,7 @@ const postData = [];
 function createRandomPost() {
   return {
     title: faker.random.words(5),
-    post_url: faker.internet.url(),
+    post_id: faker.datatype.number({ min: 1, max: 10}),
     user_id: faker.datatype.number({ min: 1, max: 10})
   }
 };
