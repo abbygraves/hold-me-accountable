@@ -55,11 +55,11 @@
           {{#each comments as |comment|}}
           <li>
             <article class="post">
-              <div class="passage">
+              <div class="passage mr-8">
                 <p>{{comment.comment_text}}</p>
               </div>
               <div class="meta">
-                By {{../userData.username}} on {{comment.createdAt}}
+                By {{../userData.username}} on {{comment.createdAt}} <button class="delete-comment float-right mr-4" onclick="deleteComment( {{comment.id}} )"><i class="fa-solid fa-trash-can"></i></button>
               </div>
             </article>
           </li>

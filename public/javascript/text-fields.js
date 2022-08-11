@@ -46,6 +46,14 @@ async function commentFormHandler(event) {
 }
 
 
+function deleteComment(id) {
+  fetch(`/api/comments/` + id, {
+    method: 'DELETE',
+  });
+  window.location.reload();
+}
+
+
 
 async function habitFormHandler(event) {
   event.preventDefault();
