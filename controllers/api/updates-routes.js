@@ -47,10 +47,11 @@ router.get('/:id', (req, res) => {
 
 router.post('/', withAuth, (req, res) => {
   //{Updates_text: "STRING", user_id: "INT", post_id: "INT"}
+  // console.log(req.body)
   Updates.create({
-    updates_text: req.body.updates_text,
+    updates_text: req.body.updates,
     user_id: req.session.user_id,
-    post_id: req.body.post_id
+    // post_id: req.body.post_id
   })
     .then(dbUpdatesData => res.json(dbUpdatesData))
     .catch(err => {

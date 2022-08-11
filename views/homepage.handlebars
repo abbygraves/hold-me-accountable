@@ -4,7 +4,7 @@
     <a href="profile.html">Hold Me Accountable</a>
   </h1>
   <div>
-    <input class="search-input mb-2 px-2" type="text" placeholder="Search" id="search-bar" />
+    <input class="search-input mr-1 mb-2 px-2" type="text" placeholder="Search" id="search-bar" />
     <i class="search-icon fa-solid fa-magnifying-glass"></i>
     <button id="logout" class="logout-button ml-5">Logout</button>
   </div>
@@ -62,14 +62,19 @@
   </div>
 
   <div class="text-fields">
-    <input class="text-input mr-2 px-2" type="text" placeholder="Add an update..." id="update-field" />
-    <button class="mr-20" type="submit">Post Update</button>
-    
-    <input class="text-input mr-2 px-2" type="text" placeholder="Add a comment.." id="comment-field" />
-    <button type="submit">Post Comment</button>
+    <form class="updates-form">
+      <input class="text-input mr-2 px-2" type="text" placeholder="Add an update..." name="update-field" />
+      <button class="mr-20" type="submit">Update</button>
+    </form>
+
+    <form class="comment-form">
+      <input class="text-input mr-2 px-2" type="text" placeholder="Add a comment.." name="comment-field" />
+      <button type="submit">Comment</button>
+    </form>
   </div>
 
 
 </main>
 
 <script src="/javascript/logout.js"></script>
+<script src="/javascript/log-inputs.js"></script>

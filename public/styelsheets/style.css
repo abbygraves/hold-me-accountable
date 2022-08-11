@@ -32,8 +32,8 @@ h1 {
 }
 
 /* ——————————————————————————————————————————————————————————————————————————— */
-
 /* LOGIN PAGE STYLYING START */
+
 /* .login-content {
    border: 2px solid fuchsia;
 } */
@@ -84,10 +84,10 @@ h1 {
   color: #20A7FF;
 }
 /* LOGIN PAGE STYLYING END */
-
-/* ——————————————————————————————————————————————————————————————————————————— */
-
+/* —————————————————————————————————————————————————————————————————————————— */
 /* PROFILE PAGE STYLING START */
+
+/* HEADER STYLING START */
 header {
   background-color: #20A7FF;
   padding: 20px 35px 0 35px;
@@ -109,7 +109,7 @@ header h1 {
   border: 2px solid grey;
   border-radius: 3px;
   filter: drop-shadow(-1px 3px 1px var(--third));
-  margin: 30px;
+  margin-top: 30px;
   padding: 5px;
 }
 
@@ -117,6 +117,15 @@ header h1 {
   color: white;
 }
 
+.logout-button {
+  color: var(--fourth);
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+}
+/* HEADER STYLING END */
+
+
+/* USER DATA STYLING START */
 .profile-title img {
   border: 2px solid #20A7FF;
   width: 200px;
@@ -139,8 +148,12 @@ header h1 {
   font-family: 'Roboto Mono', monospace;
   font-weight: medium;
   font-size: 20px;
+  margin-top: 10px;
 }
+/* USER DATA STYLING END */
 
+
+/* LOG STYLING START */
 .logs {
   display: flex;
   justify-content: space-evenly;
@@ -180,7 +193,10 @@ header h1 {
 .contents p {
   margin: 20px 10px;
 }
+/* LOG STYLING END */
 
+
+/* LOG TEXT FIELDS/BUTTONS STYLING START */
 .text-fields,
 .text-field-buttons {
   display: flex;
@@ -190,7 +206,7 @@ header h1 {
 }
 
 .text-input {
-  width: 30%;
+  width: 100%;
   border: 2px solid grey;
   border-radius: 3px;
   filter: drop-shadow(-1px 3px 1px var(--third));
@@ -201,7 +217,7 @@ header h1 {
   color: white;
   padding: 0px;
   border-radius: 3px;
-  width: 10%;
+  width: 100px;
   text-align: center;
   filter: drop-shadow(-1px 3px 1px var(--third));
 }
@@ -213,10 +229,11 @@ header h1 {
   transition: 0.5s;
   color: #20A7FF;
 }
+/* LOG TEXT FIELDS/BUTTONS STYLING END */
+
+
 /* PROFILE PAGE STYLING END */
-
 /* ——————————————————————————————————————————————————————————————————————————— */
-
 /* FOOTER STYLE START */
 footer {
   background-color: #20A7FF;
