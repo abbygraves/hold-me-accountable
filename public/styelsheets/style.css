@@ -5,14 +5,25 @@
 :root {
   --first: #20A7FF;  /* –––––––––––––– main blue color */
   --second: #18b5cae9; /* –––––––––––––– more opaque version of main color */
-  --third: rgb(220, 220, 220); /* –––––– light grey for shadows */
-  --fourth: #8F8F8F; /* ––––––––––––––––– grey used for drop shadows */
-  --fifth: #00a2ff89;
+  --third: #8F8F8F; /* ––––––––––––––––– grey used for drop shadows */
+  --fourth: white;
+  --fifth: black; 
 }
 
-/* body {
-  background-color: var(--fifth);
-} */
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#general-content-wrapper {
+  padding-bottom: 2.5rem;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 
 h1 {
   font-family: 'Roboto Mono', monospace;
@@ -23,13 +34,35 @@ h1 {
 /* ——————————————————————————————————————————————————————————————————————————— */
 
 /* LOGIN PAGE STYLYING START */
+/* .login-content {
+   border: 2px solid fuchsia;
+} */
+
+#login-page-h1 {
+  color: var(--first);
+  font-size: 100px;
+  float: left;
+  margin-top: 18vh;
+}
+
+.login-input-wrapper {
+  background-color: var(--first);
+  border-radius: 3px;
+  padding: 20px;
+  width: 500px;
+  float: right;
+  margin-top: 20vh;
+
+}
+
 .login-input {
   border: 2px solid grey;
   border-radius: 3px;
-  filter: drop-shadow(-1px 3px 1px var(--fourth));
+  filter: drop-shadow(-1px 3px 1px var(--third));
 }
 
-.login-button {
+.login-button,
+.signup-button {
   display: block;
   background-color: #20A7FF;
   color: white;
@@ -37,12 +70,15 @@ h1 {
   border-radius: 3px;
   width: 90px;
   text-align: center;
-  filter: drop-shadow(-1px 3px 1px var(--fourth));
+  filter: drop-shadow(-1px 3px 1px var(--third));
+  margin-top: 5px;
 }
 
 
 .login-button:hover,
-.login-button button:focus {
+.login-button:focus,
+.signup-button:hover,
+.signup-button:focus {
   box-shadow: inset 12em 0 0 0 white;
   transition: 0.5s;
   color: #20A7FF;
@@ -72,7 +108,7 @@ header h1 {
 .search-input {
   border: 2px solid grey;
   border-radius: 3px;
-  filter: drop-shadow(-1px 3px 1px var(--fourth));
+  filter: drop-shadow(-1px 3px 1px var(--third));
   margin: 30px;
   padding: 5px;
 }
@@ -138,7 +174,7 @@ header h1 {
   background-color: #20A7FF;
   width: 100%;
   text-align: center;
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 .contents p {
@@ -157,7 +193,7 @@ header h1 {
   width: 30%;
   border: 2px solid grey;
   border-radius: 3px;
-  filter: drop-shadow(-1px 3px 1px var(--fourth));
+  filter: drop-shadow(-1px 3px 1px var(--third));
 }
 
 .text-fields button {
@@ -167,7 +203,7 @@ header h1 {
   border-radius: 3px;
   width: 10%;
   text-align: center;
-  filter: drop-shadow(-1px 3px 1px var(--fourth));
+  filter: drop-shadow(-1px 3px 1px var(--third));
 }
 
 
@@ -184,13 +220,9 @@ header h1 {
 /* FOOTER STYLE START */
 footer {
   background-color: #20A7FF;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  text-align: center;
   justify-content: center;
-  align-items: center;
   border-top: 2px solid grey;
-  /* margin-top: 416px; */
 }
 
 footer p {
