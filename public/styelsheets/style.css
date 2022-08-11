@@ -3,10 +3,10 @@
 }
 
 :root {
-  --first: #46B8B2;  /* –––––––––––––– main color (slightly transparent) */
+  --first: #20A7FF;  /* –––––––––––––– main blue color */
   --second: #18b5cae9; /* –––––––––––––– more opaque version of main color */
   --third: rgb(220, 220, 220); /* –––––– light grey for shadows */
-  --fourth: #8F8F8F;
+  --fourth: #8F8F8F; /* ––––––––––––––––– grey used for drop shadows */
   --fifth: #00a2ff89;
 }
 
@@ -20,6 +20,9 @@ h1 {
   font-size: 100px;
 }
 
+/* ——————————————————————————————————————————————————————————————————————————— */
+
+/* LOGIN PAGE STYLYING START */
 .login-input {
   border: 2px solid grey;
   border-radius: 3px;
@@ -44,8 +47,11 @@ h1 {
   transition: 0.5s;
   color: #20A7FF;
 }
+/* LOGIN PAGE STYLYING END */
 
+/* ——————————————————————————————————————————————————————————————————————————— */
 
+/* PROFILE PAGE STYLING START */
 header {
   background-color: #20A7FF;
   padding: 20px 35px 0 35px;
@@ -171,8 +177,9 @@ header h1 {
   transition: 0.5s;
   color: #20A7FF;
 }
+/* PROFILE PAGE STYLING END */
 
-
+/* ——————————————————————————————————————————————————————————————————————————— */
 
 /* FOOTER STYLE START */
 footer {
