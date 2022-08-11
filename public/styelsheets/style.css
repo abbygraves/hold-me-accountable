@@ -197,25 +197,25 @@ header h1 {
 
 
 /* LOG TEXT FIELDS/BUTTONS STYLING START */
-.text-fields,
-.text-field-buttons {
+.forms-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   margin-top: 30px;
-  margin-bottom: 0px;
+  margin-bottom: 100px;
+  
 }
 
 .text-input {
-  width: 100%;
+  width: 460px;
   border: 2px solid grey;
   border-radius: 3px;
   filter: drop-shadow(-1px 3px 1px var(--third));
 }
 
-.text-fields button {
+.forms-wrapper button {
   background-color: #20A7FF;
   color: white;
-  padding: 0px;
+  padding: 3px 8px;
   border-radius: 3px;
   width: 100px;
   text-align: center;
@@ -223,8 +223,8 @@ header h1 {
 }
 
 
-.text-fields button:hover,
-.text-fields button:focus {
+.forms-wrapper button:hover,
+.forms-wrapper button:focus {
   box-shadow: inset 12em 0 0 0 white;
   transition: 0.5s;
   color: #20A7FF;
