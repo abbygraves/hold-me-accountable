@@ -71,6 +71,7 @@ router.post('/', (req, res) => {
 
 //{email: 'STRING', password: 'STRING'}
 router.post('/login', (req, res) => {
+  console.log("login post route");
   User.findOne({
     where: {
       email: req.body.email

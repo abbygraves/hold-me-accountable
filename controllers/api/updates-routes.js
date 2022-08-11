@@ -1,10 +1,30 @@
 const router = require('express').Router();
 const { request } = require('express');
-const { Updates } = require('../../models');
+const { Updates, User, Comment, Post } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => {
-  Updates.findAll()
+  Updates.findAll({
+    attributes: [
+      'id',
+      'updates_text',
+      'created_at'
+    ],
+    include: [
+      {
+        model: Comment,
+        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+        include: {
+          model: User,
+          attributes: ['username']
+        }
+      },
+      {
+        model: User,
+        attributes: ['username']
+      }
+    ]
+  })
     .then(dbUpdatesData => res.json(dbUpdatesData))
     .catch(err => {
       console.log(err);
