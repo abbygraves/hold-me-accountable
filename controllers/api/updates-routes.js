@@ -45,6 +45,8 @@ router.get('/:id', (req, res) => {
     });
 });
 
+
+
 router.post('/', withAuth, (req, res) => {
   //{Updates_text: "STRING", user_id: "INT", post_id: "INT"}
   // console.log(req.body)
@@ -59,6 +61,8 @@ router.post('/', withAuth, (req, res) => {
       res.status(400).json(err);
     });
 });
+
+
 
 router.delete('/:id', withAuth, (req, res) => {
   Updates.destroy({
